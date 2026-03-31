@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JS & Styling Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Dev<span>Portfolio</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#carousel-section">Gallery</a></li>
+            <li><a href="#quiz-section">Quiz</a></li>
+            <li><a href="#api-section">Jokes API</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                <i class="fas fa-sun"></i>
+            </button>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero" class="reveal">
+        <div class="hero-content">
+            <h1>Mastering Advanced <span>Web Concepts</span></h1>
+            <p>Exploring responsive design, complex JavaScript interactions, and dynamic API integrations in a single, seamless experience.</p>
+            <a href="#quiz-section" class="btn primary-btn">Take the Quiz</a>
+        </div>
+    </header>
+
+    <section id="carousel-section" class="reveal">
+        <div class="container">
+            <h2>Project Gallery</h2>
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Web Dev 1">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Web Dev 2">
+                    <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Web Dev 3">
+                </div>
+                <button id="prevBtn" class="carousel-btn"><i class="fas fa-chevron-left"></i></button>
+                <button id="nextBtn" class="carousel-btn"><i class="fas fa-chevron-right"></i></button>
+                <div class="carousel-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz-section" class="reveal">
+        <div class="container">
+            <h2>Developer Knowledge Quiz</h2>
+            <div class="quiz-card">
+                <div id="quiz-header">
+                    <span id="progress">Question 1/5</span>
+                    <span id="score-display">Score: 0</span>
+                </div>
+                <div id="question-container">
+                    <h3 id="question-text">Loading question...</h3>
+                    <div id="options-container">
+                        </div>
+                </div>
+                <div id="quiz-results" class="hidden">
+                    <h3>Quiz Completed!</h3>
+                    <p id="final-score"></p>
+                    <p id="high-score-display"></p>
+                    <button id="restart-btn" class="btn primary-btn">Restart Quiz</button>
+                </div>
+                <div class="quiz-footer">
+                    <button id="prev-quiz-btn" class="btn secondary-btn" disabled>Previous</button>
+                    <button id="next-quiz-btn" class="btn primary-btn" disabled>Next</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="api-section" class="reveal">
+        <div class="container">
+            <h2>Programming Jokes API</h2>
+            <p>Fetching real-time data from a public API</p>
+            <div class="api-card">
+                <div id="loader" class="spinner"></div>
+                <div id="joke-content" class="hidden">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p id="joke-text"></p>
+                </div>
+                <button id="fetch-btn" class="btn primary-btn">Get Another Joke</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Advanced JS & Styling Portfolio. Built with Vanilla JS.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
